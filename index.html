@@ -66,7 +66,7 @@ body{background-color:#2e1f17;color:#f0e6dc;font-family:'Montserrat',sans-serif;
 
 /* RESULT */
 #result{display:none;background-color:#2e1f17}
-.res-inner{max-width:640px;margin:0 auto;padding:64px 24px 0;animation:qIn .65s ease}
+.res-inner{max-width:640px;margin:0 auto;padding:28px 24px 0;animation:qIn .65s ease}
 .res-eyebrow{font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;opacity:.75}
 .res-era{font-family:'Lighthaus','Cormorant Garamond',serif;font-size:clamp(2.5rem,9vw,4.8rem);font-weight:300;line-height:1.05;color:#f5ede4;margin-bottom:8px}
 .res-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--muted);margin-bottom:36px}
@@ -240,11 +240,12 @@ body{background-color:#2e1f17;color:#f0e6dc;font-family:'Montserrat',sans-serif;
 
 <!-- Stories overlay -->
 <div id="stories-overlay">
-  <canvas id="stories-canvas" width="540" height="960"></canvas>
+  <canvas id="stories-canvas" width="1080" height="1920"></canvas>
   <div class="stories-actions">
-    <a class="stories-dl" id="stories-dl-btn" download="моя-епоха.png">⬇ Завантажити</a>
+    <a class="stories-dl" id="stories-dl-btn">⬇ Завантажити</a>
     <button class="stories-close" onclick="closeStories()">Закрити</button>
   </div>
+  <p style="color:rgba(245,237,228,0.4);font-size:.7rem;letter-spacing:.1em;text-align:center;margin-top:8px">На iPhone: завантажити → відкрити → зберегти у фото</p>
 </div>
 
 <script>
@@ -327,37 +328,37 @@ const Q = [
 const RES = {
   M:{era:'Середньовіччя',tag:'Твоя краса вказує на щось більше, ніж сама себе',img:'manuscript',
     credit:'Брати Лімбург. «Дуже багатий часослов герцога Беррійського», квітень, 1412–1416',
-    traits:['Глибина','Сакральне','Символізм','Традиція','Вічне'],
+    traits:['Символ','Сенс','Вічне'],
     body:`<p>Середньовіччя мало одну відповідь на всі запитання — Бог. Мистецтво існувало не щоб подобатися — воно служило. Золоте тло — не декор, а присутність вічного. Постаті більші або менші не за анатомією, а за важливістю.</p><p>Це мистецтво для тих, кому мало просто бачити — вони хочуть розуміти, що за цим стоїть.</p>`,
     hook:'Середньовіччя — частина великої системи. У курсі ти побачиш, як з його темряви і символів народилося все, що ми називаємо мистецтвом Заходу.'},
   R:{era:'Ренесанс',tag:'Людина як міра всіх речей — і ти це відчуваєш',img:'botticelli',
     credit:'Сандро Боттічеллі. «Народження Венери», бл. 1484–1486',
-    traits:['Гармонія','Порядок','Допитливість','Ясність','Краса форми'],
+    traits:['Гармонія','Розум','Краса форми'],
     body:`<p>Ренесанс повернув людину в центр. Її тіло, розум, здатність розуміти і творити. За цим стоїть конкретна ідея: світ влаштований розумно, і людина здатна це зрозуміти. Краса — не таємниця, а закон. І цей закон можна вивчити.</p><p>Якщо тебе приваблює Ренесанс — ти, мабуть, шукаєш у речах не загадку, а порядок. І не заспокоюєшся, поки не розумієш, як саме щось влаштовано.</p>`,
     hook:'Ренесанс — частина великої системи. У курсі ти зрозумієш, що стоїть за кожним вибором цих художників — і як їхня мова форми живе в мистецтві досі.'},
   B:{era:'Бароко',tag:'Ти відчуваєш світ через максимум — не через паузу',img:'rubens',
     credit:'Пітер Пауль Рубенс. «Генріх IV отримує портрет Марії Медічі», 1622–1625',
-    traits:['Інтенсивність','Пристрасть','Контраст','Глибина','Драма'],
+    traits:['Контраст','Емоція','Інтенсивність'],
     body:`<p>Бароко не вірило в спокійну красу. Карavaджо малював святих як звичайних людей: з брудними ногами, грубими руками, живим страхом в очах. Ця епоха знала: щоб зачепити людину, потрібен контраст. Темрява, з якої виривається світло. Мить, яка вирішує все.</p><p>Бароко — для тих, яким нецікаво «нормально». Їм потрібно щоб щось відбувалось.</p>`,
     hook:'Бароко — частина великої системи. У курсі ти побачиш, як театр світла і тіні змінив весь подальший живопис — і чому ця драма досі чіпляє.'},
   Ro:{era:'Рококо',tag:'Ти знаєш, що краса — це теж серйозна річ',img:'watteau',
     credit:'Антуан Ватто. «Відплиття на острів Кіферу», 1717',
-    traits:['Витонченість','Легкість','Грація','Дотепність','Насолода'],
+    traits:['Легкість','Витонченість','Насолода'],
     body:`<p>Рококо — єдина епоха, яка серйозно поставилася до задоволення. Не до величі, не до моралі — а до того, як приємно жити. Але Ватто малював галантні сцени з прихованою меланхолією: задоволення тут завжди трохи крихке, як ніби всі знають, що це не назавжди.</p><p>Рококо для тих, хто вміє насолоджуватися миттю і знає, що легкість — це не дрібниця, а мистецтво.</p>`,
     hook:'Рококо — частина великої системи. У курсі ти зрозумієш, що ховається за цією легкістю — і чому ця епоха набагато глибша, ніж здається.'},
   Rm:{era:'Романтизм',tag:'Ти шукаєш те, чому немає точного слова',img:'delacroix',
     credit:'Ежен Делакруа. «Полювання на левів», 1855',
-    traits:['Глибина почуттів','Самотність','Природа як дзеркало','Ностальгія','Свобода'],
+    traits:['Почуття','Природа','Свобода'],
     body:`<p>Просвітництво казало: людина — це розум, і розум вирішує все. Романтизм відповів: але є ще почуття, інтуїція, природа, яка більша за будь-яку теорію. Фрідріх малював людину спиною — маленьку фігуру перед величезним морем туману. Не тому що вона безпомічна. А тому що є речі, які більші за неї, — і це прекрасно.</p><p>Романтизм — для тих, кому важливо не тільки знати, але й відчувати.</p>`,
     hook:'Романтизм — частина великої системи. У курсі ти побачиш, як почуття стало головним матеріалом мистецтва — і як це змінило все, що прийшло після.'},
   I:{era:'Імпресіонізм',tag:'Ти вмієш бути тут — і в цьому твоя сила',img:'monet',
     credit:'Клод Моне. «Великий канал у Венеції», 1908',
-    traits:['Присутність','Легкість','Чуттєвість','Радість деталей','Свіжий погляд'],
+    traits:['Момент','Світло','Присутність'],
     body:`<p>Моне першим серйозно запитав: а що якщо намалювати просто те, що я бачу прямо зараз? Це світло на воді о сьомій ранку. Цей дим над вокзалом. Імпресіонізм зробив звичайний момент гідним уваги: не треба чекати грандіозного — прекрасне вже є.</p><p>Це епоха для тих, яким цікаво не «що це означає», а «яке це на відчуття просто зараз».</p>`,
     hook:'Імпресіонізм — частина великої системи. У курсі ти зрозумієш, чому ці картини були скандалом — і як вони змінили саму ідею того, що таке мистецтво.'},
   S:{era:'Символізм',tag:'Ти знаєш, що за видимим є ще один шар',img:'klimt_house',
     credit:'Ґустав Клімт. «Будинок лісника», 1912',
-    traits:['Інтуїція','Символічне мислення','Таємниця','Глибина','Двозначність'],
+    traits:['Підтекст','Таємниця','Інтуїція'],
     body:`<p>Символізм з'явився тоді, коли художники відчули: реальність — це тільки поверхня. За нею — сни, архетипи, те, що неможливо назвати прямо. Клімт покривав персонажів золотом і орнаментом не для краси, а щоб показати: людина занурена в щось більше за себе.</p><p>Символізм — для тих, хто читає між рядків і не довіряє надто простим поясненням.</p>`,
     hook:'Символізм — частина великої системи. У курсі ти навчишся читати символи і коди, які художники закладали у свої роботи — і це назавжди змінить твій погляд на мистецтво.'},
 };
@@ -415,7 +416,9 @@ function showResult(){
   document.getElementById('cta-bg-div').style.backgroundImage=`url(${CTA_BG})`;
   document.getElementById('logo-img').src=LOGO_SRC;
   document.getElementById('result').style.display='block';
-  window.scrollTo({top:0,behavior:'smooth'});
+  document.documentElement.scrollTop=0;
+  document.body.scrollTop=0;
+  window.scrollTo({top:0,behavior:'instant'});
 }
 
 function retryQuiz(){
@@ -440,7 +443,7 @@ function generateStories(){
   const r=RES[currentEra];
   const canvas=document.getElementById('stories-canvas');
   const ctx=canvas.getContext('2d');
-  const W=540,H=960;
+  const W=1080,H=1920;
   canvas.width=W;canvas.height=H;
   ctx.fillStyle='#2e1f17';
   ctx.fillRect(0,0,W,H);
@@ -456,55 +459,54 @@ function generateStories(){
   const paintImg=new Image();
   paintImg.crossOrigin='anonymous';
   paintImg.onload=function(){
-    // Draw painting cropped to top portion - better quality
+    // Draw painting cropped top portion
     const imgAspect = paintImg.width / paintImg.height;
-    const drawH = Math.min(W / imgAspect, 420);
-    // Crop from center-top for horizontal images
+    const drawH = Math.min(W / imgAspect, 860);
     const srcH = paintImg.width > paintImg.height
       ? paintImg.height
       : Math.round(paintImg.width * (drawH / W));
     ctx.drawImage(paintImg, 0, 0, paintImg.width, srcH, 0, 0, W, drawH);
 
-    const grad=ctx.createLinearGradient(0,drawH-140,0,drawH);
+    const grad=ctx.createLinearGradient(0,drawH-280,0,drawH);
     grad.addColorStop(0,'rgba(46,31,23,0)');
     grad.addColorStop(1,'rgba(46,31,23,1)');
-    ctx.fillStyle=grad;ctx.fillRect(0,drawH-140,W,140);
+    ctx.fillStyle=grad;ctx.fillRect(0,drawH-280,W,280);
 
-    ctx.strokeStyle='rgba(201,160,160,0.45)';ctx.lineWidth=1;
-    ctx.beginPath();ctx.moveTo(56,drawH+24);ctx.lineTo(W-56,drawH+24);ctx.stroke();
+    ctx.strokeStyle='rgba(201,160,160,0.45)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(112,drawH+48);ctx.lineTo(W-112,drawH+48);ctx.stroke();
 
     ctx.fillStyle='rgba(201,160,160,0.72)';
-    ctx.font='500 19px Montserrat,sans-serif';
+    ctx.font='500 38px Montserrat,sans-serif';
     ctx.textAlign='center';
-    ctx.fillText('МОЯ ЕПОХА',W/2,drawH+58);
+    ctx.fillText('МОЯ ЕПОХА',W/2,drawH+116);
 
     ctx.fillStyle='#f5ede4';
-    ctx.font='300 68px Lighthaus,Georgia,serif';
-    ctx.fillText(r.era,W/2,drawH+136);
+    ctx.font='300 136px Lighthaus,Georgia,serif';
+    ctx.fillText(r.era,W/2,drawH+272);
 
     ctx.fillStyle='rgba(160,136,120,0.88)';
-    ctx.font='italic 24px Georgia,serif';
-    const tagY = drawH+184;
-    wrapText(ctx,r.tag,W/2,tagY,W-80,34);
+    ctx.font='italic 48px Georgia,serif';
+    const tagY = drawH+368;
+    wrapText(ctx,r.tag,W/2,tagY,W-160,68);
 
-    // Link placeholder right under tagline
-    const linkY = tagY + 60;
-    ctx.fillStyle='rgba(201,160,160,0.25)';
-    ctx.fillRect(W/2-170,linkY,340,42);
+    // Link placeholder — lower, more breathing room
+    const linkY = H-420;
+    ctx.fillStyle='rgba(201,160,160,0.22)';
+    ctx.fillRect(W/2-340,linkY,680,84);
     ctx.fillStyle='rgba(245,237,228,0.5)';
-    ctx.font='italic 15px Georgia,serif';
-    ctx.fillText('місце для посилання на тест',W/2,linkY+26);
+    ctx.font='italic 30px Georgia,serif';
+    ctx.fillText('місце для посилання на тест',W/2,linkY+52);
 
-    ctx.strokeStyle='rgba(201,160,160,0.25)';
-    ctx.beginPath();ctx.moveTo(56,H-140);ctx.lineTo(W-56,H-140);ctx.stroke();
+    ctx.strokeStyle='rgba(201,160,160,0.25)';ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(112,H-280);ctx.lineTo(W-112,H-280);ctx.stroke();
 
     ctx.fillStyle='rgba(232,196,196,0.78)';
-    ctx.font='500 16px Montserrat,sans-serif';
-    ctx.fillText('КЛЮЧ ДО МИСТЕЦТВА',W/2,H-104);
+    ctx.font='500 32px Montserrat,sans-serif';
+    ctx.fillText('КЛЮЧ ДО МИСТЕЦТВА',W/2,H-208);
 
     ctx.fillStyle='rgba(160,136,120,0.65)';
-    ctx.font='18px Georgia,serif';
-    ctx.fillText('@rybakaanna',W/2,H-76);
+    ctx.font='36px Georgia,serif';
+    ctx.fillText('@rybakaanna',W/2,H-152);
 
     const logoImg=new Image();
     logoImg.onload=function(){
@@ -514,9 +516,10 @@ function generateStories(){
       ctx.globalAlpha=1;
       const ov=document.getElementById('stories-overlay');
       ov.classList.add('show');
+      const dataUrl=canvas.toDataURL('image/jpeg',0.95);
       const dl=document.getElementById('stories-dl-btn');
-      dl.href=canvas.toDataURL('image/png');
-      dl.download=`моя-епоха-${r.era}.png`;
+      dl.href=dataUrl;
+      dl.download=`моя-епоха-${r.era}.jpg`;
     };
     logoImg.src=LOGO_SRC;
   };
